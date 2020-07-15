@@ -15,6 +15,8 @@ h3,
 h4,
 h5,
 h6 {
+    line-height: 1.2;
+    margin: 0;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
 }
@@ -22,10 +24,11 @@ h6 {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Josefin Sans', sans-serif; ;
+    font-family: 'Josefin Sans', sans-serif;
+    ;
     font-weight: 500;
     line-height: 1.3;
-    background: $whiteGrad;    
+    background: $whiteGrad;
 }
 
 a,
@@ -34,12 +37,13 @@ a:hover {
     text-decoration: none;
 }
 
-.wrapper { 
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
+.hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 
@@ -51,5 +55,11 @@ a:hover {
 
 
 //FrontendMentors.com
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

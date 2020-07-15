@@ -1,0 +1,186 @@
+.hero {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero__body {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+    width: 60%;
+    padding-left: 165px;
+    background: url(/images/bg-pattern-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 1100px) {
+    .hero__body {
+        width: 100%;
+        padding-left: 0;
+        align-items: center;
+    }
+}
+
+h2.hero__title-light {
+    color: $pink;
+    font-size: $font-xlarge;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1100px) {
+    h2.hero__title-light {
+        font-size: $font-large;
+    }
+}
+
+h2.hero__title-dark {
+    color: $darkRed;
+    font-size: $font-xlarge;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1100px) {
+    h2.hero__title-dark {
+        font-size: $font-large;
+    }
+}
+
+p.hero__copy {
+    color: $pink;
+    font-size: $font-med;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    line-height: 1.9em;
+    max-width: 60%;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 1100px) {
+    p.hero__copy {
+        text-align: center;
+        max-width: 80%;
+    }
+}
+
+
+
+.hero__image {
+    width: 40%;
+    height: 100vh;
+    background: url(/images/hero-desktop.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 1100px) {
+    .hero__image {
+        display: none;
+    }
+}
+
+.hero__image-mobile {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .hero__image-mobile {
+        display: block;
+        width: 100%;
+        height: 250px;
+        background: url(/images/hero-mobile.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 1100px) {
+    .hero__image-mobile {
+        margin-bottom: 65px;
+    }
+}
+
+
+.hero__logo {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    padding: 60px 0 30px 0;
+    margin-bottom: 140px;
+
+
+    img.logo {
+        width: auto;
+        height: 35px;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .hero__logo {
+        padding: 30px;
+        margin-bottom: 0px;
+    }
+}
+
+.hero__subscribe {
+    margin-top: 25px;
+}
+
+form.hero__subscribe {
+    display: flex;
+
+    input[type="email"] {
+        width: 420px;
+        border: 1px solid $grey;
+        padding: 20px 15px;
+        border-radius: 50px;
+        transition: border 150ms ease-in;
+    }
+
+    @media (max-width: 1100px) {
+        input[type="email"] {
+            width: 300px;
+        }
+    }
+
+    input[type="email"]:focus {
+        border: 2px solid $red;
+        outline: none;
+
+    }
+
+    input[type="email"]:hover {
+        border: 2px solid $red;
+        outline: none;
+
+    }
+
+    button {
+        padding: 15px 50px;
+        border-radius: 50px;
+        background-image: linear-gradient(to right, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+        margin-left: -50px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        transition: background-image 300ms ease-in-out;
+
+        &:hover {
+            box-shadow: 0 25px 50px -5px rgba(0, 0, 0, 0.35);
+            background-image: linear-gradient(to right, hsl(354, 80%, 90%) 0%, hsl(0, 77%, 84%) 100%);
+        }
+    }
+}
